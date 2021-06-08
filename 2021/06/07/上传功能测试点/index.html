@@ -1,0 +1,238 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>上传功能测试点 | Hexo</title><meta name="keywords" content="功能测试点"><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="上传功能测试点  文件类型检查 指定文件类型 指定文件类型后缀大写 指定文件类型后缀大小写混合 指定之外文件类型（反例）   文件大小检查假设限制上传文件最大为x；  小于x 等于x（反例） 大于x（反例） 等于0（视需求允许） 非指定文件 且 大于x（反例） 如果没限制上传文件大小，测试超大文件的上传   文件名称检查 符合命名规范 不符合命名规范（反例） 符合 命名规范 &amp;&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="上传功能测试点">
+<meta property="og:url" content="http://example.com/2021/06/07/%E4%B8%8A%E4%BC%A0%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%E7%82%B9/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="上传功能测试点  文件类型检查 指定文件类型 指定文件类型后缀大写 指定文件类型后缀大小写混合 指定之外文件类型（反例）   文件大小检查假设限制上传文件最大为x；  小于x 等于x（反例） 大于x（反例） 等于0（视需求允许） 非指定文件 且 大于x（反例） 如果没限制上传文件大小，测试超大文件的上传   文件名称检查 符合命名规范 不符合命名规范（反例） 符合 命名规范 &amp;&amp;">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2021-06-07T09:37:26.000Z">
+<meta property="article:modified_time" content="2021-06-08T03:54:59.970Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="功能测试点">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2021/06/07/%E4%B8%8A%E4%BC%A0%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%E7%82%B9/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '上传功能测试点',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-06-08 11:54:59'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><link rel="stylesheet" href="/css/cu.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="/css/card.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="/css/font.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="/css/background.css" media="defer" onload="this.media='all'"><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://z3.ax1x.com/2021/04/19/cooE8O.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/shuo/"><i class="fa-fw fas fa-folder-open"></i><span> 说说</span></a></div><div class="menus_item"><a class="site-page" href="/bibi/"><i class="fa-fw fas fa-bomb"></i><span> 图库</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Hexo</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/shuo/"><i class="fa-fw fas fa-folder-open"></i><span> 说说</span></a></div><div class="menus_item"><a class="site-page" href="/bibi/"><i class="fa-fw fas fa-bomb"></i><span> 图库</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">上传功能测试点</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-06-07T09:37:26.000Z" title="Created 2021-06-07 17:37:26">2021-06-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-06-08T03:54:59.970Z" title="Updated 2021-06-08 11:54:59">2021-06-08</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="上传功能测试点"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div><article class="post-content" id="article-container"><h2 id="上传功能测试点"><a href="#上传功能测试点" class="headerlink" title="上传功能测试点"></a>上传功能测试点</h2><hr>
+<ol>
+<li><h3 id="文件类型检查"><a href="#文件类型检查" class="headerlink" title="文件类型检查"></a>文件类型检查</h3><ul>
+<li>指定文件类型</li>
+<li>指定文件类型后缀大写</li>
+<li>指定文件类型后缀大小写混合</li>
+<li>指定之外文件类型（反例）</li>
+</ul>
+</li>
+<li><h3 id="文件大小检查"><a href="#文件大小检查" class="headerlink" title="文件大小检查"></a>文件大小检查</h3><p>假设限制上传文件最大为x；</p>
+<ul>
+<li>小于x</li>
+<li>等于x（反例）</li>
+<li>大于x（反例）</li>
+<li>等于0（视需求允许）</li>
+<li>非指定文件 且 大于x（反例）</li>
+<li>如果没限制上传文件大小，测试超大文件的上传</li>
+</ul>
+</li>
+<li><h3 id="文件名称检查"><a href="#文件名称检查" class="headerlink" title="文件名称检查"></a>文件名称检查</h3><ul>
+<li>符合命名规范</li>
+<li>不符合命名规范（反例）</li>
+<li>符合 命名规范 &amp;&amp; 不符合 长度限制（反例）</li>
+</ul>
+</li>
+<li><h3 id="文件路径检查"><a href="#文件路径检查" class="headerlink" title="文件路径检查"></a>文件路径检查</h3><ul>
+<li>当前路径下存在 &amp;&amp; 正确路径</li>
+<li>当前路径下不存在（反例）</li>
+<li>当前路径下不合法（反例）</li>
+<li>不存在的文件路径（反例）</li>
+<li>文件已打开</li>
+</ul>
+</li>
+<li><h3 id="文件上传响应时间检查"><a href="#文件上传响应时间检查" class="headerlink" title="文件上传响应时间检查"></a>文件上传响应时间检查</h3><ul>
+<li>上传正常大小文件，检查上传时间是否在可接受范围内（或依需求而定）</li>
+</ul>
+</li>
+<li><h3 id="文件内容检查"><a href="#文件内容检查" class="headerlink" title="文件内容检查"></a>文件内容检查</h3><ul>
+<li>同名文件</li>
+<li>文件内容要求规则</li>
+<li>非文件内容要求规则（反例）</li>
+<li>病毒文件（反例）</li>
+</ul>
+</li>
+<li><h3 id="上传页面检查"><a href="#上传页面检查" class="headerlink" title="上传页面检查"></a>上传页面检查</h3><ul>
+<li>上传失败后是否有提示，提示是否合理</li>
+<li>上传成功后是否有提示，提示是否合理</li>
+<li>上传是否显示进度，进度显示是否正常</li>
+</ul>
+</li>
+<li><h3 id="文件上传中场景"><a href="#文件上传中场景" class="headerlink" title="文件上传中场景"></a>文件上传中场景</h3><ul>
+<li>上传中，文件被删除（反例）</li>
+<li>上传中，文件夹被删除（反例）</li>
+<li>上传中，文件名称被修改（反例）</li>
+<li>上传中，文件类型被修改（反例）</li>
+<li>上传中，网络中断（反例）</li>
+<li>上传中，取消上传（反例）</li>
+<li>上传中，关闭标签页 || 关闭浏览器（反例）</li>
+</ul>
+</li>
+<li><h3 id="上传后"><a href="#上传后" class="headerlink" title="上传后"></a>上传后</h3><ul>
+<li>上传后，存数据库还是缓存</li>
+<li>存数据库，写入数据库的信息是否准确</li>
+<li>删除成功后，对应数据库记录是否更新</li>
+<li>存缓存，使用时获取缓存方式 &amp;&amp; 缓存更新 &amp;&amp; 缓存定时删除</li>
+<li>删除成功后，对应缓存记录是否更新</li>
+<li>上传后，是否可以下载，内容是否一致</li>
+<li>上传后，是否可以预览，内容是否一致</li>
+<li>上传成功后样式是否合理</li>
+</ul>
+</li>
+<li><h3 id="上传权限验证"><a href="#上传权限验证" class="headerlink" title="上传权限验证"></a>上传权限验证</h3><ul>
+<li>非授权用户上传（反例）</li>
+<li>授权用户上传</li>
+<li>非授权用户删除（反例）</li>
+<li>授权用户删除</li>
+</ul>
+</li>
+<li><h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
+<li>多用户同时上传同名文件，上传时间正常，上传后查看各自文件内容</li>
+</ul>
+</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">John Doe</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2021/06/07/%E4%B8%8A%E4%BC%A0%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%E7%82%B9/">http://example.com/2021/06/07/上传功能测试点/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%E7%82%B9/">功能测试点</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2021/05/22/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E4%B8%80%E5%B9%B4%E4%BA%94%E6%9C%88%E4%BA%8C%E5%8D%81%E4%BA%8C%E6%97%A5/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">二零二一年五月二十二日</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%E7%82%B9"><span class="toc-number">1.</span> <span class="toc-text">上传功能测试点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%E6%A3%80%E6%9F%A5"><span class="toc-number">1.1.</span> <span class="toc-text">文件类型检查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F%E6%A3%80%E6%9F%A5"><span class="toc-number">1.2.</span> <span class="toc-text">文件大小检查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%90%8D%E7%A7%B0%E6%A3%80%E6%9F%A5"><span class="toc-number">1.3.</span> <span class="toc-text">文件名称检查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%E6%A3%80%E6%9F%A5"><span class="toc-number">1.4.</span> <span class="toc-text">文件路径检查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%93%8D%E5%BA%94%E6%97%B6%E9%97%B4%E6%A3%80%E6%9F%A5"><span class="toc-number">1.5.</span> <span class="toc-text">文件上传响应时间检查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E6%A3%80%E6%9F%A5"><span class="toc-number">1.6.</span> <span class="toc-text">文件内容检查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E9%A1%B5%E9%9D%A2%E6%A3%80%E6%9F%A5"><span class="toc-number">1.7.</span> <span class="toc-text">上传页面检查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E4%B8%AD%E5%9C%BA%E6%99%AF"><span class="toc-number">1.8.</span> <span class="toc-text">文件上传中场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E5%90%8E"><span class="toc-number">1.9.</span> <span class="toc-text">上传后</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E6%9D%83%E9%99%90%E9%AA%8C%E8%AF%81"><span class="toc-number">1.10.</span> <span class="toc-text">上传权限验证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-number">1.11.</span> <span class="toc-text">其他</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By John Doe</div><div class="footer_custom_text"><p><a style="margin-inline:5px"target="_blank" href="https://hexo.io/"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="博客框架为 Hexo" alt="HEXO"></a><a style="margin-inline:5px"target="_blank" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="主题采用 Butterfly" alt="Butterfly"></a><a style="margin-inline:5px"target="_blank" href="https://www.jsdelivr.com/"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用 Jsdelivr 为静态资源提供CDN加速" alt="Jsdelivr"></a><a style="margin-inline:5px"target="_blank" href="https://github.com/"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="本站项目由 GitHub 托管" alt="GitHub"></a><a style="margin-inline:5px"target="_blank"href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" alt="img" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'default',
+      })
+      false && mermaid.init()
+    })
+  }
+}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

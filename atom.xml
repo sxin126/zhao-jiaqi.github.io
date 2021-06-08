@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-05-22T10:10:09.778Z</updated>
+  <updated>2021-06-08T03:54:59.970Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>上传功能测试点</title>
+    <link href="http://example.com/2021/06/07/%E4%B8%8A%E4%BC%A0%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%E7%82%B9/"/>
+    <id>http://example.com/2021/06/07/%E4%B8%8A%E4%BC%A0%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%E7%82%B9/</id>
+    <published>2021-06-07T09:37:26.000Z</published>
+    <updated>2021-06-08T03:54:59.970Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="上传功能测试点"><a href="#上传功能测试点" class="headerlink" title="上传功能测试点"></a>上传功能测试点</h2><hr><ol><li><h3 id="文件类型检查"><a href="#文件类型检查" class="headerlink" title="文件类型检查"></a>文件类型检查</h3><ul><li>指定文件类型</li><li>指定文件类型后缀大写</li><li>指定文件类型后缀大小写混合</li><li>指定之外文件类型（反例）</li></ul></li><li><h3 id="文件大小检查"><a href="#文件大小检查" class="headerlink" title="文件大小检查"></a>文件大小检查</h3><p>假设限制上传文件最大为x；</p><ul><li>小于x</li><li>等于x（反例）</li><li>大于x（反例）</li><li>等于0（视需求允许）</li><li>非指定文件 且 大于x（反例）</li><li>如果没限制上传文件大小，测试超大文件的上传</li></ul></li><li><h3 id="文件名称检查"><a href="#文件名称检查" class="headerlink" title="文件名称检查"></a>文件名称检查</h3><ul><li>符合命名规范</li><li>不符合命名规范（反例）</li><li>符合 命名规范 &amp;&amp; 不符合 长度限制（反例）</li></ul></li><li><h3 id="文件路径检查"><a href="#文件路径检查" class="headerlink" title="文件路径检查"></a>文件路径检查</h3><ul><li>当前路径下存在 &amp;&amp; 正确路径</li><li>当前路径下不存在（反例）</li><li>当前路径下不合法（反例）</li><li>不存在的文件路径（反例）</li><li>文件已打开</li></ul></li><li><h3 id="文件上传响应时间检查"><a href="#文件上传响应时间检查" class="headerlink" title="文件上传响应时间检查"></a>文件上传响应时间检查</h3><ul><li>上传正常大小文件，检查上传时间是否在可接受范围内（或依需求而定）</li></ul></li><li><h3 id="文件内容检查"><a href="#文件内容检查" class="headerlink" title="文件内容检查"></a>文件内容检查</h3><ul><li>同名文件</li><li>文件内容要求规则</li><li>非文件内容要求规则（反例）</li><li>病毒文件（反例）</li></ul></li><li><h3 id="上传页面检查"><a href="#上传页面检查" class="headerlink" title="上传页面检查"></a>上传页面检查</h3><ul><li>上传失败后是否有提示，提示是否合理</li><li>上传成功后是否有提示，提示是否合理</li><li>上传是否显示进度，进度显示是否正常</li></ul></li><li><h3 id="文件上传中场景"><a href="#文件上传中场景" class="headerlink" title="文件上传中场景"></a>文件上传中场景</h3><ul><li>上传中，文件被删除（反例）</li><li>上传中，文件夹被删除（反例）</li><li>上传中，文件名称被修改（反例）</li><li>上传中，文件类型被修改（反例）</li><li>上传中，网络中断（反例）</li><li>上传中，取消上传（反例）</li><li>上传中，关闭标签页 || 关闭浏览器（反例）</li></ul></li><li><h3 id="上传后"><a href="#上传后" class="headerlink" title="上传后"></a>上传后</h3><ul><li>上传后，存数据库还是缓存</li><li>存数据库，写入数据库的信息是否准确</li><li>删除成功后，对应数据库记录是否更新</li><li>存缓存，使用时获取缓存方式 &amp;&amp; 缓存更新 &amp;&amp; 缓存定时删除</li><li>删除成功后，对应缓存记录是否更新</li><li>上传后，是否可以下载，内容是否一致</li><li>上传后，是否可以预览，内容是否一致</li><li>上传成功后样式是否合理</li></ul></li><li><h3 id="上传权限验证"><a href="#上传权限验证" class="headerlink" title="上传权限验证"></a>上传权限验证</h3><ul><li>非授权用户上传（反例）</li><li>授权用户上传</li><li>非授权用户删除（反例）</li><li>授权用户删除</li></ul></li><li><h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul><li>多用户同时上传同名文件，上传时间正常，上传后查看各自文件内容</li></ul></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;上传功能测试点&quot;&gt;&lt;a href=&quot;#上传功能测试点&quot; class=&quot;headerlink&quot; title=&quot;上传功能测试点&quot;&gt;&lt;/a&gt;上传功能测试点&lt;/h2&gt;&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;h3 id=&quot;文件类型检查&quot;&gt;&lt;a href=&quot;#文件类型检查&quot; class</summary>
+      
+    
+    
+    
+    
+    <category term="功能测试点" scheme="http://example.com/tags/%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%E7%82%B9/"/>
+    
+  </entry>
   
   <entry>
     <title>二零二一年五月二十二日</title>
